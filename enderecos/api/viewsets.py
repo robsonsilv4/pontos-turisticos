@@ -4,6 +4,6 @@ from enderecos.models import Endereco
 from .serializers import EnderecoSerializer
 
 
-class EnderecoViewset(ModelViewSet):
+class EnderecoViewSet(ModelViewSet):
     queryset = Endereco.objects.all()
     serializer_class = EnderecoSerializer
