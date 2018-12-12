@@ -16,3 +16,6 @@ class PontoTuristicoViewSet(ModelViewSet):
             'b': 2,
             'c': 3
         })
+
+    def create(self, request, *args, **kwargs):
+        return Response({'ola': 'Robson'})
