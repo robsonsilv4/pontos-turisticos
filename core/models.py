@@ -1,8 +1,9 @@
 from django.db import models
+
 from atracoes.models import Atracao
-from enderecos.models import Endereco
-from comentarios.models import Comentario
 from avaliacoes.models import Avaliacao
+from comentarios.models import Comentario
+from enderecos.models import Endereco
 
 
 class PontoTuristico(models.Model):
@@ -13,6 +14,7 @@ class PontoTuristico(models.Model):
     atracoes = models.ManyToManyField(Atracao)
     comentarios = models.ManyToManyField(Comentario)
     avaliacoes = models.ManyToManyField(Avaliacao)
+    foto = models.ImageField(upload_to='pontos-turisticos', null=True, blank=True)
 
     def __str__(self):
         return self.nome
