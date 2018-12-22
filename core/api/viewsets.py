@@ -1,5 +1,6 @@
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
+
 from core.models import PontoTuristico
 from .serializers import PontoTuristicoSerializer
 
@@ -20,5 +21,14 @@ class PontoTuristicoViewSet(ModelViewSet):
     def create(self, request, *args, **kwargs):
         return Response({'ola': 'Robson'})
 
-    # def destroy(self, request, *args, **kwargs):
-    #     pass
+    def destroy(self, request, *args, **kwargs):
+        pass
+
+    def retrieve(self, request, *args, **kwargs):
+        pass
+
+    def update(self, request, *args, **kwargs):
+        pass
+
+    def partial_update(self, request, *args, **kwargs):
+        pass
