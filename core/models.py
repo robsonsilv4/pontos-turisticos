@@ -16,5 +16,9 @@ class PontoTuristico(models.Model):
     avaliacoes = models.ManyToManyField(Avaliacao)
     foto = models.ImageField(upload_to='pontos-turisticos', null=True, blank=True)
 
+    @property
+    def get_descricao_completa2(self):
+        return f'{self.nome} {self.descricao}'
+
     def __str__(self):
         return self.nome
